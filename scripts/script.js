@@ -6,7 +6,9 @@ function animate({ timing, draw, duration }) {
   requestAnimationFrame(function animate(time) {
     // timeFraction goes from 0 to 1
     let timeFraction = (time - start) / duration;
-    if (timeFraction > 1) timeFraction = 1;
+    if (timeFraction > 1) {
+      timeFraction = 1;
+    }
 
     // calculate the current animation state
     const progress = timing(timeFraction);
